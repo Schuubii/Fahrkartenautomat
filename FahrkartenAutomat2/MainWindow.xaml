@@ -1,0 +1,66 @@
+﻿<Window x:Class="AutomatenAufgabe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutomatenAufgabe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="label_1" Content="Guthaben in € :" HorizontalAlignment="Left" Margin="314,117,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Label_Guthaben" Content="0" HorizontalAlignment="Left" Margin="409,117,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.213,0.555"/>
+        <Button x:Name="Button_Fahrkarte" Content="Karte kaufen" HorizontalAlignment="Left" Margin="311,238,0,0" VerticalAlignment="Top" Width="75" Click="Button_Fahrkarte_Click"/>
+        <Label x:Name="label_2" Content="Anzahl Karten: " HorizontalAlignment="Left" Margin="314,163,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Label_Karten" Content="0" HorizontalAlignment="Left" Margin="409,166,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.86,0.404"/>
+        <Label x:Name="Label_Info" Content="" HorizontalAlignment="Left" Margin="314,187,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Red" FontSize="16"/>
+        <Label x:Name="Lbl_Fahrkartenautomat" Content="Fahrkartenautomat" HorizontalAlignment="Left" Margin="289,52,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="Btn_20ct" Content="20ct" HorizontalAlignment="Left" Margin="64,120,0,0" VerticalAlignment="Top" Width="41" Height="41" RenderTransformOrigin="0.796,-0.171" Click="Btn_20ct_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Btn_50ct" Content="50ct" HorizontalAlignment="Left" Margin="64,166,0,0" VerticalAlignment="Top" Width="41" Height="41" RenderTransformOrigin="0.796,-0.171" Click="Btn_50ct_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Btn_2EU" Content="2€" HorizontalAlignment="Left" Margin="64,212,0,0" VerticalAlignment="Top" Width="41" Height="41" RenderTransformOrigin="0.796,-0.171" Click="Btn_2EU_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Btn_1EU" Content="1€" HorizontalAlignment="Left" Margin="110,166,0,0" VerticalAlignment="Top" Width="41" Height="41" RenderTransformOrigin="0.796,-0.171" Click="Btn_1EU_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Btn_10ct" Content="10ct" HorizontalAlignment="Left" Margin="110,120,0,0" VerticalAlignment="Top" Width="41" Height="41" RenderTransformOrigin="0.796,-0.171" Click="Btn_10ct_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Btn_AB_Ticket" Content="AB-Ticket | Kosten: 2,90€" HorizontalAlignment="Left" Margin="548,129,0,0" VerticalAlignment="Top" Width="143" Click="Btn_AB_Ticket_Click"/>
+        <Button x:Name="Btn_BC_Ticket" Content="BC-Ticket | Kosten: 3,30€" HorizontalAlignment="Left" Margin="548,159,0,0" VerticalAlignment="Top" Width="143" RenderTransformOrigin="0.501,-0.177" Click="Btn_BC_Ticket_Click"/>
+        <Button x:Name="Btn_ABC_Ticket" Content="ABC-Ticket | Kosten 3,60€" HorizontalAlignment="Left" Margin="548,187,0,0" VerticalAlignment="Top" Width="143" RenderTransformOrigin="0.544,2.948" Click="Btn_ABC_Ticket_Click"/>
+        <Label Content="Kosten in € :" HorizontalAlignment="Left" Margin="314,141,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Lbl_GesamtKosten" Content="0" HorizontalAlignment="Left" Margin="409,141,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.513,0.336"/>
+        <Button x:Name="Btn_5EU" Content="5€" HorizontalAlignment="Left" Margin="74,292,0,0" VerticalAlignment="Top" Width="75" Click="Btn_5EU_Click"/>
+        <Button x:Name="Btn_10EU" Content="10€" HorizontalAlignment="Left" Margin="74,316,0,0" VerticalAlignment="Top" Width="75" Click="Btn_10EU_Click"/>
+        <Button x:Name="Btn_20EU" Content="20€" HorizontalAlignment="Left" Margin="74,340,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.523,-0.458" Click="Btn_20EU_Click"/>
+        <Label x:Name="Lbl_Geldweinwurf" Content="Geldeinwurf" HorizontalAlignment="Left" Margin="64,52,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="Lbl_Ticketauswahl" Content="Ticketauswahl" HorizontalAlignment="Left" Margin="548,52,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="Lbl_Wechselgeld_Info" Content="" HorizontalAlignment="Left" Margin="314,292,0,0" VerticalAlignment="Top" Visibility="Visible"/>
+        <Label x:Name="Lbl_Wechselgeld" Content="" HorizontalAlignment="Left" Margin="345,335,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
